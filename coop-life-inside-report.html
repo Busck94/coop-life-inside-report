@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Inside × Coop | Employer Branding Success 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0A4D3C;
+            --primary-light: #0D6B4F;
+            --accent: #F5A623;
+            --accent-light: #FFB84D;
+            --bg-dark: #0A1628;
+            --bg-light: #F8F9FA;
+            --text-dark: #1A1A1A;
+            --text-light: #FFFFFF;
+            --text-muted: #6B7280;
+            --success: #10B981;
+            --gradient-primary: linear-gradient(135deg, #0A4D3C 0%, #0D6B4F 100%);
+            --gradient-accent: linear-gradient(135deg, #F5A623 0%, #FFB84D 100%);
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-dark);
+            background: var(--bg-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            background: var(--gradient-primary);
+            color: var(--text-light);
+            padding: 80px 20px 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(245, 166, 35, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-30px, -30px) scale(1.1); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(42px, 6vw, 72px);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            max-width: 600px;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .stat-value {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section {
+            padding: 80px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+
+        .metric-box {
+            background: white;
+            padding: 32px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid #E5E7EB;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metric-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-accent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .metric-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .metric-box:hover::before {
+            opacity: 1;
+        }
+
+        .metric-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-accent);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .metric-number {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .metric-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .metric-description {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .video-performance {
+            background: white;
+            padding: 48px;
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            margin-bottom: 60px;
+        }
+
+        .video-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .video-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .video-caption {
+            padding: 20px;
+        }
+
+        .video-caption h4 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .video-caption p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .video-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .comparison-section {
+            background: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .comparison-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .comparison-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .comparison-value {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+        }
+
+        .comparison-description {
+            font-size: 14px;
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+
+        .value-proposition {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .value-item {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 32px;
+            border-radius: 16px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .value-item h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: var(--accent-light);
+        }
+
+        .value-item p {
+            font-size: 14px;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .strengths-weaknesses {
+            background: linear-gradient(135deg, #F9FAFB 0%, #FFFFFF 100%);
+        }
+
+        .sw-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .sw-column h3 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 28px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .sw-column.strengths h3 {
+            color: var(--success);
+        }
+
+        .sw-column.weaknesses h3 {
+            color: var(--accent);
+        }
+
+        .sw-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .sw-item {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            border-left: 4px solid;
+        }
+
+        .strengths .sw-item {
+            border-color: var(--success);
+        }
+
+        .weaknesses .sw-item {
+            border-color: var(--accent);
+        }
+
+        .sw-item-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .sw-item-text {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .recommendations {
+            background: var(--gradient-primary);
+            color: var(--text-light);
+        }
+
+        .rec-grid {
+            display: grid;
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .rec-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .rec-card h3 {
+            font-size: 22px;
+            margin-bottom: 16px;
+            color: var(--accent-light);
+        }
+
+        .rec-card ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .rec-card li {
+            padding-left: 28px;
+            position: relative;
+            font-size: 15px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .rec-card li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .roadmap {
+            background: white;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin-top: 60px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--primary) 0%, var(--accent) 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 48px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            background: var(--accent);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--primary);
+        }
+
+        .timeline-quarter {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .timeline-tasks {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .task-item {
+            background: #F9FAFB;
+            padding: 16px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .task-checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary);
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .footer {
+            background: var(--bg-dark);
+            color: var(--text-light);
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+
+        .footer-cta {
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .footer-cta h2 {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .footer-cta p {
+            opacity: 0.8;
+            margin-bottom: 32px;
+        }
+
+        .cta-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .cta-stat {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cta-stat-value {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .cta-stat-label {
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        .footer-branding {
+            font-size: 14px;
+            opacity: 0.6;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 20px 80px;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section {
+                padding: 60px 20px;
+            }
+
+            .metric-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .video-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .sw-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .value-proposition {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .animate-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in:nth-child(1) { animation-delay: 0.1s; }
+        .animate-in:nth-child(2) { animation-delay: 0.2s; }
+        .animate-in:nth-child(3) { animation-delay: 0.3s; }
+        .animate-in:nth-child(4) { animation-delay: 0.4s; }
+        .animate-in:nth-child(5) { animation-delay: 0.5s; }
+        .animate-in:nth-child(6) { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge">Life Inside × Coop</div>
+                <h1>3,4M kr i Organisk Employer Branding Värde</h1>
+                <p>Autentiska medarbetarröster driver recruitment utan betalde medier. Här är resultaten från Coops Life Inside-implementering.</p>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-card animate-in">
+                    <span class="stat-value">1,3M</span>
+                    <span class="stat-label">Organiska Visningar</span>
+                </div>
+                <div class="stat-card animate-in">
+                    <span class="stat-value">62,8K</span>
+                    <span class="stat-label">Interaktioner</span>
+                </div>
+                <div class="stat-card animate-in">
+                    <span class="stat-value">174h</span>
+                    <span class="stat-label">Visningstid</span>
+                </div>
+                <div class="stat-card animate-in">
+                    <span class="stat-value">5%</span>
+                    <span class="stat-label">Spelgrad</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Overview -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Plattformsöversikt Livstid</h2>
+                <p class="section-subtitle">Totala resultat sedan lansering visar exceptionell organisk räckvidd och engagemang</p>
+            </div>
+
+            <div class="metric-grid">
+                <div class="metric-box animate-in">
+                    <div class="metric-icon">👁️</div>
+                    <div class="metric-number">1,33M</div>
+                    <div class="metric-title">Presenterade (Views)</div>
+                    <div class="metric-description">Total räckvidd över alla kanaler och stories</div>
+                </div>
+                <div class="metric-box animate-in">
+                    <div class="metric-icon">▶️</div>
+                    <div class="metric-number">62,8K</div>
+                    <div class="metric-title">Spelningar (Plays)</div>
+                    <div class="metric-description">Aktivt engagemang med video-innehåll</div>
+                </div>
+                <div class="metric-box animate-in">
+                    <div class="metric-icon">⚡</div>
+                    <div class="metric-number">5%</div>
+                    <div class="metric-title">Spelgrad (Play Rate)</div>
+                    <div class="metric-description">Stark för employer-content jämfört med standard</div>
+                </div>
+                <div class="metric-box animate-in">
+                    <div class="metric-icon">🎯</div>
+                    <div class="metric-number">62,8K</div>
+                    <div class="metric-title">Interaktioner</div>
+                    <div class="metric-description">Klick, delningar och engagemang</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Performance -->
+    <section class="section" style="background: #F9FAFB;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Toppvideos Prestation</h2>
+                <p class="section-subtitle">Autentiska medarbetarröster från Coop-teamet</p>
+            </div>
+
+            <div class="video-gallery">
+                <div class="video-card">
+                    <img src="video1.png" alt="Kom och jobba hos oss!" loading="lazy">
+                    <div class="video-caption">
+                        <h4>Kom och jobba hos oss!</h4>
+                        <p>103,1K visningar</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <img src="video2.png" alt="Butiksmedarbetare berättar" loading="lazy">
+                    <div class="video-caption">
+                        <h4>Utveckling på jobbet</h4>
+                        <p>Medarbetare delar sina erfarenheter</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <img src="video3.png" alt="Medarbetare i butiken" loading="lazy">
+                    <div class="video-caption">
+                        <h4>Vardag på Coop</h4>
+                        <p>Möt teamet i Coops butiker</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <img src="video4.png" alt="Glad medarbetare" loading="lazy">
+                    <div class="video-caption">
+                        <h4>Vad ger glädje på jobbet</h4>
+                        <p>Personliga berättelser från medarbetare</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <img src="video5.png" alt="Medarbetare delar sina tankar" loading="lazy">
+                    <div class="video-caption">
+                        <h4>Min roll på Coop</h4>
+                        <p>Karriärmöjligheter och utveckling</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <img src="video6.png" alt="Bagare på Coop" loading="lazy">
+                    <div class="video-caption">
+                        <h4>Bagare & Konditor</h4>
+                        <p>Specialistroller inom Coop</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LinkedIn Comparison -->
+    <section class="section comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">Värde vs LinkedIn Rekrytering</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Life Inside genererar enormt värde utan betalde medier-kostnader</p>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <div class="comparison-title">Estimerat Media-värde</div>
+                    <div class="comparison-value">3,4M kr</div>
+                    <div class="comparison-description">Motsvarande värde i betalde impressions, engagemang och visningstid</div>
+                </div>
+                <div class="comparison-card">
+                    <div class="comparison-title">LinkedIn-kostnad (samma räckvidd)</div>
+                    <div class="comparison-value">2,8M kr</div>
+                    <div class="comparison-description">Estimerad kostnad för LinkedIn recruitment campaign med samma resultat</div>
+                </div>
+                <div class="comparison-card">
+                    <div class="comparison-title">Potentiell Sparning</div>
+                    <div class="comparison-value">80-95%</div>
+                    <div class="comparison-description">Billigare än betald LinkedIn-rekrytering med högre trovärdighet</div>
+                </div>
+                <div class="comparison-card">
+                    <div class="comparison-title">Uppskattad ROI</div>
+                    <div class="comparison-value">∞</div>
+                    <div class="comparison-description">Organisk räckvidd utan direkta mediekostnader ger oändlig avkastning</div>
+                </div>
+            </div>
+
+            <div class="value-proposition">
+                <div class="value-item">
+                    <h3>Autentiska Medarbetarröster</h3>
+                    <p>Högre trovärdighet än corporate messaging - verkliga människor, verkliga arbetsplatser</p>
+                </div>
+                <div class="value-item">
+                    <h3>Direkt Integration</h3>
+                    <p>Smidig väg till jobbportalen utan extra klick eller friktion i kandidatresan</p>
+                </div>
+                <div class="value-item">
+                    <h3>10-20x Längre Visningstid</h3>
+                    <p>174 timmar total watch-time vs typiska 30-60 sekunder på LinkedIn ads</p>
+                </div>
+                <div class="value-item">
+                    <h3>Organisk Räckvidd</h3>
+                    <p>Nå passiva kandidater innan de aktivt söker jobb - helt utan CPM-kostnader</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strengths & Weaknesses -->
+    <section class="section strengths-weaknesses">
+        <div class="container">
+            <div class="section-header">
+                <h2>Employer Branding Analys</h2>
+                <p class="section-subtitle">Styrkor att bygga vidare på och områden för optimering</p>
+            </div>
+
+            <div class="sw-grid">
+                <div class="sw-column strengths">
+                    <h3>✓ Styrkor</h3>
+                    <div class="sw-list">
+                        <div class="sw-item">
+                            <div class="sw-item-title">Autenticitet</div>
+                            <div class="sw-item-text">Verkliga medarbetare och arbetsplatser skapar mycket hög trovärdighet för Gen Z/Millennials</div>
+                        </div>
+                        <div class="sw-item">
+                            <div class="sw-item-title">Diversity</div>
+                            <div class="sw-item-text">Olika åldersgrupper, roller och lokaliteter ger bredare appeal</div>
+                        </div>
+                        <div class="sw-item">
+                            <div class="sw-item-title">Konsistenta Teman</div>
+                            <div class="sw-item-text">Fokus på utveckling, glädje och stolthet förmedlar positiv corporate message</div>
+                        </div>
+                        <div class="sw-item">
+                            <div class="sw-item-title">Högt Engagemang</div>
+                            <div class="sw-item-text">5% play rate och 62.8K interaktioner - kandidater kollar längre än standard-ads</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sw-column weaknesses">
+                    <h3>⚠ Möjligheter</h3>
+                    <div class="sw-list">
+                        <div class="sw-item">
+                            <div class="sw-item-title">Låg CTA-prestation</div>
+                            <div class="sw-item-text">"Kom och jobba hos oss" videos har 3% play rate vs 5% för andra - copy behöver förbättras</div>
+                        </div>
+                        <div class="sw-item">
+                            <div class="sw-item-title">Duplikat Videos</div>
+                            <div class="sw-item-text">3x "Hur utvecklas du i din roll?" riskerar overexposure - konsolidera till unika perspectives</div>
+                        </div>
+                        <div class="sw-item">
+                            <div class="sw-item-title">Utkast-backlog</div>
+                            <div class="sw-item-text">5 videos i utkast-läge - saknas continuous content flow</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendations -->
+    <section class="section recommendations">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">Rekommendationer Framåt</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Strategiska åtgärder för att maximera recruitment-resultat</p>
+            </div>
+
+            <div class="rec-grid">
+                <div class="rec-card">
+                    <h3>Innehållsstrategi</h3>
+                    <ul>
+                        <li>Konsolidera duplikat videos - behåll 1-2 starka versioner av varje fråga</li>
+                        <li>Producera baserat på rekryteringsbehov: "En dag som butikssäljare", "Ledning på Coop", "Sommarvikarie"</li>
+                        <li>Personalisera efter recruitment funnel: Emotionell hook → Career-focus → Förbättrad CTA</li>
+                        <li>"Behind the Scenes"-content om hur rekrytering fungerar och vad som händer under intervju</li>
+                    </ul>
+                </div>
+
+                <div class="rec-card">
+                    <h3>Distribution & Integration</h3>
+                    <ul>
+                        <li>Email marketing automation med videos baserat på kandidatens fas</li>
+                        <li>Karriärssida overhaul med hero-element och relevanta stories per jobb-kategori</li>
+                        <li>LinkedIn organisk strategi där Coop delar Life Inside-stories direkt</li>
+                        <li>Job board integration med relevanta videos embedded i varje annons</li>
+                    </ul>
+                </div>
+
+                <div class="rec-card">
+                    <h3>Metrics & Optimization</h3>
+                    <ul>
+                        <li>Key Metric: Story Views → Applicants (målsättning öka CTR till 2-5%)</li>
+                        <li>A/B testing av olika end-screen callouts och video-versioner</li>
+                        <li>UTM-tracking för att veta vilka stories driver mest applications</li>
+                        <li>Säsongsanalys och planera 3-6 månader i förväg för högsäsonger</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section class="section roadmap">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recruitment Roadmap 2026</h2>
+                <p class="section-subtitle">Steg-för-steg plan för att optimera och skala Life Inside</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-quarter">Q1 2026</div>
+                    <div class="timeline-tasks">
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>Konsolidera video-biblioteket (ta bort duplikater)</div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>Implementera UTM-tracking på alla story-links</div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>Analysera nuvarande prestanda</div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>Planera höstrekrytering</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-quarter">Q2 2026</div>
+                    <div class="timeline-tasks">
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>Integrera Life Inside i email automation</div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>Uppdatera karriärssida med video-widgets</div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>Producera 2-3 nya "Behind the scenes"-videos</div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>Implementera email-sekvenser för recruitment funnel</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-quarter">Q3-Q4 2026</div>
+                    <div class="timeline-tasks">
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>Mät ROAS och conversion rate från videos</div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>Skala upp med 3-5 nya videos baserat på prestanda</div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>Testa LinkedIn-organic distribution</div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>Optimera call-to-action based on learnings</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" style="margin-bottom: 0;">
+                    <div class="timeline-quarter">Långsiktiga Mål (12+ månader)</div>
+                    <div class="timeline-tasks">
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>Öka CTR till 5%</div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>Applicant rate: 20%+ av video-viewers</div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>Yearly hires via Life Inside: 400+</div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-checkbox"></div>
+                            <div>Budget savings: 2,8M-8,3M kr/år</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="footer">
+        <div class="container">
+            <div class="footer-cta">
+                <h2>Expected ROI</h2>
+                <p>Med optimerad CTR och email-integration kan Coop förvänta sig dramatiska resultat direkt från Life Inside-funnel</p>
+            </div>
+
+            <div class="cta-stats">
+                <div class="cta-stat">
+                    <span class="cta-stat-value">400+</span>
+                    <span class="cta-stat-label">Nyanställningar/år via Life Inside</span>
+                </div>
+                <div class="cta-stat">
+                    <span class="cta-stat-value">2,8M kr</span>
+                    <span class="cta-stat-label">Potentiell sparning vs LinkedIn</span>
+                </div>
+                <div class="cta-stat">
+                    <span class="cta-stat-value">63,7K</span>
+                    <span class="cta-stat-label">Extra klick per kampanj vid 5% CTR</span>
+                </div>
+            </div>
+
+            <div class="footer-branding">
+                <p><strong>Life Inside</strong> — Autentisk employer branding som driver recruitment</p>
+                <p style="margin-top: 12px; opacity: 0.5;">Rapport genererad Januari 2026</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.metric-box, .video-card, .comparison-card, .value-item, .sw-item, .rec-card, .timeline-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
